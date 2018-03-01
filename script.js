@@ -1,8 +1,47 @@
 moment.locale("fr");
 $("#date").text( moment().format('LL'));  
 
-var varFetch = "http://api.openweathermap.org/data/2.5/weather?q=Pamiers&lang=fr&units=metric&appid=3c52f05dd1f0d3ad4faba99820954ae9";
 
+
+var ville = $("#address").val();
+
+function meteo(ville){
+	$.ajax({
+		url: "http://api.openweathermap.org/data/2.5/weather?q="+ ville +"&lang=fr&units=metric&appid=3c52f05dd1f0d3ad4faba99820954ae9",
+		type: "GET",
+		dataType: "jsonp",
+		success: function(data){
+			 $("#tempMax").text("Temp. Max "+ data.main.temp_max+"°");
+			 $("#tempMin").text("Temp. Min "+ data.main.temp_min+"°");
+			 $("#pressure").text("Pres. atmospherique "+ data.main.pressure+" Pa");
+			 $("#windspeed").text("Vitesse de vent "+ data.wind.speed+" Km/h");
+			 $("#humidity").text("Humidité "+ data.main.humidity+" %");
+			 $("#temp").text(parseInt(data.main.temp)+"°");
+			 $("#coordonées").text("Longitude = " + data.coord.lon+ " Latitude = " + data.coord.lat )
+			 $("#map").html("<iframe src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBMtdsVDGb8x9NJku3jdI3eFfAL9tu22ao&q="+ville+"&zoom=12&maptype=roadmap' width='100%' height='100%' frameborder='0'></iframe>");
+
+		}
+	})
+
+}
+
+$(document).ready(function(){
+	meteo(ville);
+
+	$("#submit").click(function(){
+		ville = $("#address").val();
+		meteo(ville);
+	})
+	$("#address").keypress(function(e){
+		if ( e.keyCode==13 ){
+			ville = $("#address").val();
+			meteo(ville);
+		}
+	});
+})
+
+
+/*
 $("#submit").click(function(){
 	var ville = $("#address").val();
 	console.log(ville);
@@ -103,4 +142,6 @@ window.fetch(varFetch)
         });
       }
 
+*/
 
+$("#map").html("<iframe src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBMtdsVDGb8x9NJku3jdI3eFfAL9tu22ao&q="+ville+"&zoom=12&maptype=roadmap' width='100%' height='100%' frameborder='0'></iframe>");

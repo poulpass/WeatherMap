@@ -1,8 +1,9 @@
+
 body, html{
     margin-left: auto;
     margin-right: auto;
     font-family: 'Raleway', sans-serif;
-    	background-color: #00796B;
+    background-color: #00796B;
 }
 
 #all{
@@ -17,42 +18,49 @@ body, html{
     color: white;
 }
 
+
 #form{ 
-	text-align: center;
-	margin: auto; 
-	width: 33%;
+	
+	margin: 0px; 
+	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 #address{
-	height: 25px;
+	margin-top: 10px;
+	font-size: 150%;
 	border-style: none none solid none;
 	color: white;
+	width: 70%;
 	background-color: #00796B;
 }
 
 #date{
 	font-weight: lighter;
-	font-size: 2em;
+	font-size: 1,5em;
 	text-align: center;
 	margin: auto;
 	padding: 1em;
-	padding-bottom: 0px;
 }
 
 #blocListe{
 	text-align: left;
+	margin-bottom: -30px;
 }
 
 #liste{
 	text-align: left;
+	font-size: 1em;
 	margin: 0px;
-	line-height: 2.7;
+	line-height: 1;
 	list-style:none;
+	font-weight: lighter;
 
 }
 #info{
+	margin-top: -30px;
+	margin-bottom: -20px;
     margin-left: auto;
     margin-right: auto;
 	text-align: center;
@@ -62,15 +70,17 @@ body, html{
 #temp{
 	margin: auto;
 	font-weight: lighter;
-	font-size: 250px;
+	font-size: 10em;
+	margin-right: -40px;
 }
 
 #submit{
-	width: 70px;
+	font-size: 150%;
+	width: 100px;
 	margin: auto;
-	margin-top: 30px;
+	margin-top: -5px;
 	border-style: none;
-	padding: 2px;
+	padding: 3px;
 	border-radius: 20px;
 	color: #00796B;
 }
@@ -80,8 +90,8 @@ body, html{
 	border: solid;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
-	height: 100%;
+	margin-top: 0px;
+	height: 55%;
 	width: 100%;
 	display: flex;
 	justify-content: center; 
@@ -98,3 +108,232 @@ body, html{
 
 }
 
+
+#coordonées{
+	font-size: 100%;
+	margin: 0px;
+}
+
+
+
+
+@media (min-width: 992px) {
+	body, html{
+	    margin-left: auto;
+	    margin-right: auto;
+	    font-family: 'Raleway', sans-serif;
+	    background-color: #00796B;
+	}
+
+	#all{
+		width: 100%;
+		height: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding: 4%;
+	    padding-bottom: 0px;
+	    font-family: 'Roboto', sans-serif;
+	    background-color: #00796B;
+	    color: white;
+	}
+
+	#form{ 
+		
+		margin: 0px; 
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	#address{
+		margin-top: 10px;
+		font-size: 150%;
+		border-style: none none solid none;
+		color: white;
+		width: 100%;
+		background-color: #00796B;
+	}
+
+	#date{
+		font-weight: lighter;
+		font-size: 150%;
+		text-align: center;
+		margin: auto;
+		padding: 1em;
+	}
+
+	#blocListe{
+		text-align: left;
+		margin-bottom: -30px;
+	}
+
+	#liste{
+		text-align: left;
+		font-size: 150%;
+		margin: 0px;
+		line-height: 2;
+		list-style:none;
+		font-weight: lighter;
+
+	}
+	#info{
+		margin-top: -30px;
+		margin-bottom: -20px;
+	    margin-left: auto;
+	    margin-right: auto;
+		text-align: center;
+		color: white;
+	}
+
+	#temp{
+		margin: auto;
+		font-weight: lighter;
+		font-size: 1800%;
+		margin-right: -40px;
+	}
+
+	#submit{
+		font-size: 150%;
+		width: 100px;
+		margin: auto;
+		margin-top: -5px;
+		border-style: none;
+		padding: 3px;
+		border-radius: 20px;
+		color: #00796B;
+	}
+
+
+	#mapFlag {
+		border: solid;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0px;
+		height: 55%;
+		width: 100%;
+		display: flex;
+		justify-content: center; 
+		position: relative;
+	}
+
+
+
+	#map {
+		z-index: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #00796B;
+
+	}
+
+
+	#coordonées{
+		font-size: 100%;
+		margin: 0px;
+	}
+}
+
+
+
+@media (min-width: 1200px){
+
+	body, html{
+	    margin-left: auto;
+	    margin-right: auto;
+	    font-family: 'Raleway', sans-serif;
+	    background-color: #00796B;
+	}
+
+	#all{
+		width: 100%;
+		height: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding: 4%;
+	    padding-bottom: 0px;
+	    font-family: 'Roboto', sans-serif;
+	    background-color: #00796B;
+	    color: white;
+	}
+
+	#form{ 
+		text-align: center;
+		margin: auto; 
+		width: 33%;
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	#address{
+		height: 25px;
+		border-style: none none solid none;
+		color: white;
+		background-color: #00796B;
+	}
+
+	#date{
+		font-weight: lighter;
+		font-size: 2em;
+		text-align: center;
+		margin: auto;
+		padding: 1em;
+		margin-bottom: 2em;
+		padding-bottom: 0px;
+	}
+
+	#blocListe{
+		text-align: left;
+	}
+
+	#liste{
+		text-align: left;
+		margin: 0px;
+		line-height: 2.7;
+		list-style:none;
+	}
+
+	#info{
+	    margin-left: auto;
+	    margin-right: auto;
+		text-align: center;
+		color: white;
+	}
+
+	#temp{
+		margin: auto;
+		font-weight: lighter;
+		font-size: 250px;
+	}
+
+	#submit{
+		width: 100px;
+		margin: auto;
+		margin-top: 30px;
+		border-style: none;
+		padding: 2px;
+		border-radius: 20px;
+		color: #00796B;
+	}
+
+
+	#mapFlag {
+		border: solid;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center; 
+		position: relative;
+	}
+
+	#map {
+		z-index: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #00796B;
+
+	}
+}
