@@ -7,7 +7,7 @@ var ville = $("#address").val();
 
 function meteo(ville){
 	$.ajax({
-		url: "http://api.openweathermap.org/data/2.5/weather?q="+ ville +"&lang=fr&units=metric&appid=3c52f05dd1f0d3ad4faba99820954ae9",
+		url: "https://api.openweathermap.org/data/2.5/weather?q="+ ville +"&lang=fr&units=metric&appid=3c52f05dd1f0d3ad4faba99820954ae9",
 		type: "GET",
 		dataType: "jsonp",
 		success: function(data){
@@ -144,4 +144,4 @@ window.fetch(varFetch)
 
 */
 
-$("#map").html("<iframe src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBMtdsVDGb8x9NJku3jdI3eFfAL9tu22ao&q="+ville+"&zoom=12&maptype=roadmap' width='100%' height='100%' frameborder='0'></iframe>");
+//$("#map").html("<iframe src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBMtdsVDGb8x9NJku3jdI3eFfAL9tu22ao&q="+ville+"&zoom=12&maptype=roadmap' width='100%' height='100%' frameborder='0'></iframe>");
